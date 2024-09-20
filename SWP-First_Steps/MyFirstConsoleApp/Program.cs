@@ -1,18 +1,24 @@
-﻿Console.WriteLine("Hell SWP!");
+﻿using System;
 
-string username;
-Console.Write("Enter your name: ");
-username = Console.ReadLine();
-Console.WriteLine("Your name is " + username);
-
-int age = 0;
-Console.Write("Enter your age: ");
-age = Int32.Parse(Console.ReadLine());
-Console.WriteLine("Your age is " + age);
-if (age >= 15) 
+namespace readFromConsole
 {
-    Console.WriteLine("You are old enough.");
-} else
-{ 
-    Console.WriteLine("You are to young.");
-};
+    class Programm
+    {
+        static void Main(string[] args)
+        {
+            string userInput = " ";
+
+            while(userInput != "Beenden")
+            {
+                Console.Write("Please enter a string or type Beenden to stop: ");
+
+                userInput = Console.ReadLine();
+
+                Console.WriteLine("Your input was: " + userInput);
+            }
+
+        }
+
+    }
+
+}
