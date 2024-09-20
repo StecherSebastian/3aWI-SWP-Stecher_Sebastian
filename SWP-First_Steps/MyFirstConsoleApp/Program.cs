@@ -6,13 +6,13 @@ namespace readFromConsole
     {
         static void Main(string[] args)
         {
-            string userInput = " ";
+            int userInput = 0;
 
-            while(userInput != "Beenden")
+            while(userInput != 1)
             {
-                Console.Write("Please enter a string or type Beenden to stop: ");
+                Console.Write("Please enter a number or type 1 to stop: ");
 
-                userInput = Console.ReadLine();
+                userInput = Int32.Parse(Console.ReadLine());
 
                 Console.WriteLine("Your input was: " + userInput);
             }
