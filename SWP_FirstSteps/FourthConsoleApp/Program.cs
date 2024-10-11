@@ -10,10 +10,11 @@ Console.WriteLine("\n Programmierauftrag_04");
 
 string? userInputString = " ";
 int userInputInt = 0;
+double userInputDouble = 0;
 
 while (!String.Equals(userInputString, "Beenden", StringComparison.CurrentCultureIgnoreCase))
 {
-    Console.Write("Bitte geben Sie eine Natürliche Zahl ein (oder Beenden um zu beenden):");
+    Console.Write("Bitte geben Sie eine Natürliche Zahl ein (oder Beenden um zu beenden): ");
     userInputString = Console.ReadLine();
     if (int.TryParse(userInputString, out userInputInt))
     {
@@ -26,8 +27,8 @@ while (!String.Equals(userInputString, "Beenden", StringComparison.CurrentCultur
                 Console.WriteLine($"Quadrat der eingegebenen Zahl: {userInputInt}");
                 break;
             case "2":
-                userInputInt = (int)Math.Sqrt(userInputInt);
-                Console.WriteLine($"Wurzel der eingegebenen Zahl: {userInputInt}");
+                userInputDouble = Math.Sqrt(userInputInt);
+                Console.WriteLine($"Wurzel der eingegebenen Zahl: {userInputDouble}");
                 break;
             case "3":
                 int userInputFakultaet = 1;
@@ -37,6 +38,13 @@ while (!String.Equals(userInputString, "Beenden", StringComparison.CurrentCultur
                 }
                 Console.WriteLine($"Fakultät der eingegebenen Zahl: {userInputFakultaet}");
                 break;
+            default:
+                Console.WriteLine("\n ### Invalid Input ### \n");
+                break;
         }
+    }
+    else if(!String.Equals(userInputString, "Beenden", StringComparison.CurrentCultureIgnoreCase))
+    {
+        Console.WriteLine("\n ### Invalid Input ### \n");
     }
 }
