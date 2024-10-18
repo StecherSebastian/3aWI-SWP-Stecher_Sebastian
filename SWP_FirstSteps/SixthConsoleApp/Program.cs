@@ -12,9 +12,6 @@
 Console.WriteLine("Programmierauftrag_06");
 
 string? userInput = " ";
-int inputValue1 = 0;
-int inputValue2 = 0;
-double calculationResult = 0;
 
 while (!String.Equals(userInput, "Beenden", StringComparison.CurrentCultureIgnoreCase))
 {
@@ -23,83 +20,102 @@ while (!String.Equals(userInput, "Beenden", StringComparison.CurrentCultureIgnor
     switch (userInput)
     {
         case "1":
-            calculationAddition();
+            CalculationAddition();
             break;
         case "2":
-            calculationSubtraction();
+            CalculationSubtraction();
             break;
         case "3":
-            calculationMultiplication();
+            CalculationMultiplication();
             break;
         case "4":
-            calculationDivision();
+            CalculationDivision();
             break;
         case "5":
-            calculationPower();
+            CalculationPower();
             break;
         case "6":
-            calculationRoot();
+            CalculationRoot();
             break;
         case "7":
-            calculationFakultaet();
+            CalculationFakultaet();
             break;
         case "8":
-            calculationInvert();
+            CalculationInvert();
             break;
     }
 }
 
-void getOneValue()
+int GetOneValue()
 {
+    int inputValue1;
     Console.Write("Bitte geben Sie eine Zahl ein: ");
-    int.TryParse(Console.ReadLine(), out inputValue1);
+    while (!int.TryParse(Console.ReadLine(), out inputValue1))
+    {
+        Console.WriteLine("### Invalid Input: Try again ###");
+    }
+    return inputValue1;
 }
 
-void getTwoValues()
+(int, int) GetTwoValues()
 {
+    int inputValue1;
+    int inputValue2;
     Console.Write("Bitte geben Sie die erste Zahl ein: ");
-    int.TryParse(Console.ReadLine(), out inputValue1);
+    while (!int.TryParse(Console.ReadLine(), out inputValue1))
+    {
+        Console.WriteLine("### Invalid Input: Try again ###");
+    }
     Console.Write("Bitte geben Sie die zweite Zahl ein: ");
-    int.TryParse(Console.ReadLine(), out inputValue2);
+    while (!int.TryParse(Console.ReadLine(), out inputValue2))
+    {
+        Console.WriteLine("### Invalid Input: Try again ###");
+    }
+    return (inputValue1, inputValue2);
 }
 
-void calculationAddition()
+void CalculationAddition()
 {
     Console.WriteLine("\n Addition");
-    getTwoValues();
-    calculationResult = inputValue1 + inputValue2;
+    (int inputValue1, int inputValue2) = GetTwoValues();
+    double calculationResult = inputValue1 + inputValue2;
     Console.WriteLine($"Das Ergebnis der Addition ist {calculationResult}");
 }
 
-void calculationSubtraction()
+void CalculationSubtraction()
 {
     Console.WriteLine("\n Subtraktion");
-    getTwoValues();
-    calculationResult = inputValue1 - inputValue2;
+    (int inputValue1, int inputValue2) = GetTwoValues();
+    double calculationResult = inputValue1 - inputValue2;
     Console.WriteLine($"Das Ergebnis der Subtraktion ist {calculationResult}");
 }
 
-void calculationMultiplication()
+void CalculationMultiplication()
 {
     Console.WriteLine("\n Multiplikation");
-    getTwoValues();
-    calculationResult = inputValue1 * inputValue2;
+    (int inputValue1, int inputValue2) = GetTwoValues();
+    double calculationResult = inputValue1 * inputValue2;
     Console.WriteLine($"Das Ergebnis der Multiplikation ist {calculationResult}");
 }
 
-void calculationDivision()
+void CalculationDivision()
 {
     Console.WriteLine("\n Division");
-    getTwoValues();
-    calculationResult = inputValue1 / inputValue2;
+    (int inputValue1, int inputValue2) = GetTwoValues();
+    while (inputValue2 == 0)
+    {
+        Console.WriteLine("\n ### Division durch 0 ungültig. ### \n");
+        inputValue2 = GetOneValue();
+    }
+    double calculationResult = inputValue1 / inputValue2;
     Console.WriteLine($"Das Ergebnis der Division ist {calculationResult}");
 }
 
-void calculationPower()
+void CalculationPower()
 {
     Console.WriteLine("\n Potenz");
-    getTwoValues();
-    calculationResult = inputValue1;
+    (int inputValue1, int inputValue2) = GetTwoValues();
+    double calculationResult = inputValue1;
     for (int i = 0; i < inputValue2 - 1; i++)
     {
         calculationResult *= inputValue1;
@@ -107,19 +123,29 @@ void calculationPower()
     Console.WriteLine($"Das Ergebnsi von {inputValue1} hoch {inputValue2} ist {calculationResult}");
 }
 
-void calculationRoot()
+void CalculationRoot()
 {
     Console.WriteLine("\n Wurzelziehen");
-    getTwoValues();
-    calculationResult = Math.Pow(inputValue1, (1.0 / inputValue2));
+    (int inputValue1, int inputValue2) = GetTwoValues();
+    while (inputValue1 < 0 || inputValue2 <= 0)
+    {
+        Console.WriteLine("\n ### Ungültige Eingabe - Wurzelexponent positiv und ungleich 0 sein & Radikand muss positiv sein: Versuchen sie es erneut ### \n");
+        (inputValue1, inputValue2) = GetTwoValues();
+    }
+    double calculationResult = Math.Pow(inputValue1, (1.0 / inputValue2));
     Console.WriteLine($"Das Ergbnis der {inputValue2}-te Wurzel von {inputValue1} ist {calculationResult}");
 }
 
-void calculationFakultaet()
+void CalculationFakultaet()
 {
     Console.WriteLine("\n Fakultät");
-    getOneValue();
-    calculationResult = 1;
+    int inputValue1 = GetOneValue();
+    while(inputValue1 < 0)
+    {
+        Console.WriteLine("\n ### Fakultät von negativen Zahlen nicht definiert ### \n");
+        inputValue1 = GetOneValue();
+    }
+    double calculationResult = 1;
     for (int i = 2; i <= inputValue1; i++)
     {
         calculationResult = calculationResult * i;
@@ -127,10 +153,10 @@ void calculationFakultaet()
     Console.WriteLine($"Die Fakultät von {inputValue1} ist {calculationResult}");
 }
 
-void calculationInvert()
+void CalculationInvert()
 {
     Console.WriteLine("\n Invertieren");
-    getOneValue();
-    calculationResult = inputValue1 - (2 * inputValue1);
+    int inputValue1 = GetOneValue();
+    double calculationResult = inputValue1 - (2 * inputValue1);
     Console.WriteLine($"Die invertierte Zahl ist {calculationResult}");
 }
