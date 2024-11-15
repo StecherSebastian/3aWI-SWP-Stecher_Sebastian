@@ -1,18 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace MyFirstCat
 {
-    internal class Cat
+    class Cat
     {
-        private string? _Color = null;
+        private string? _Color;
         private DateTime _BirthDate;
-        public string Color
+        private string? _Name;
+        public string? Color
         {
             get { return _Color; }
             set
@@ -31,6 +26,11 @@ namespace MyFirstCat
         public Cat(DateTime birthdate)
         {
             _BirthDate = birthdate;
+        }
+        public string? Name { get; set; }
+        public override string ToString()
+        {
+            return $"Name: {Name} Color: {Color} Age: {Age}";
         }
     }
 }

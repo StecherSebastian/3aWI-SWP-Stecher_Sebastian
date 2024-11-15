@@ -22,14 +22,13 @@ while (!String.Equals(userInputString, "Exit", StringComparison.CurrentCultureIg
             Console.Write("\nWhich color has the cat?\n*:");
             userInputString = Console.ReadLine();
             myCat.Color = userInputString;
+            Console.Write("\nWhat is the name of the cat?\n*:");
+            userInputString = Console.ReadLine();
+            myCat.Name = userInputString;
             shelterDornbirn.Animals.Add(myCat);
             break;
         case "2":
-            Console.WriteLine("\nThe Shelter in Dornbirn contains:");
-            foreach (var animal in shelterDornbirn.Animals)
-            {
-                Console.WriteLine($"A {animal.Color} cat that is {animal.Age} years old");
-            }
+            shelterDornbirn.printAnimalShelter();
             break;
     }
 }
