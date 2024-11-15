@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SixthConsoleApp", "SixthCon
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FourthConsoleApp", "FourthConsoleApp\FourthConsoleApp.csproj", "{2AE24A7C-AAA1-4EE0-B4DA-038BAE8463A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgrammUE_01", "ProgrammUE_01\ProgrammUE_01.csproj", "{2E8FF745-291E-4E7A-A32F-750B1F1ABD16}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFirstCat", "MyFirstCat\MyFirstCat.csproj", "{34372EBF-E684-4491-9776-08BEC07C95AA}"
 EndProject
 Global
@@ -39,6 +41,10 @@ Global
 		{34372EBF-E684-4491-9776-08BEC07C95AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34372EBF-E684-4491-9776-08BEC07C95AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34372EBF-E684-4491-9776-08BEC07C95AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E8FF745-291E-4E7A-A32F-750B1F1ABD16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E8FF745-291E-4E7A-A32F-750B1F1ABD16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E8FF745-291E-4E7A-A32F-750B1F1ABD16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E8FF745-291E-4E7A-A32F-750B1F1ABD16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
