@@ -4,11 +4,6 @@ namespace MyFirstCat
 {
     class Animal : Creature
     {
-        public string Name { get; set; }
-
-        public Animal(string name, DateTime birthdate) : base(birthdate)
-        {
-            this.Name = name;
-        }
+        public Animal(string name, string color, DateTime birthdate) : base(name, color, birthdate) {}
     }
 }
