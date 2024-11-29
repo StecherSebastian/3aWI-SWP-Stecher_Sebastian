@@ -7,6 +7,8 @@ namespace MyFirstCat
         public string Name { get; set; }
 
         public Animal(string name)
-            { this.Name = name; }
+        {
+            this.Name = name;
+        }
     }
 }

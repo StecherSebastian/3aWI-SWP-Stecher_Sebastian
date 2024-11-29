@@ -24,7 +24,6 @@ namespace MyFirstCat
         }
         public Cat(DateTime birthdate, string name = "not defiend", string color = "nothing") : base(name)
         {
-            Name = name;
             Color = color;
             _BirthDate = birthdate;
         }
