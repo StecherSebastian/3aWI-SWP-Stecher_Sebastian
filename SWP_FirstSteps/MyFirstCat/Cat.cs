@@ -5,7 +5,6 @@ namespace MyFirstCat
     class Cat : Animal
     {
         private string? _Color;
-        private DateTime _BirthDate;
         public string? Color
         {
             get { return _Color; }
@@ -15,17 +14,9 @@ namespace MyFirstCat
                 _Color = value;
             }
         }
-        public int Age
-        {
-            get
-            {
-                return (DateTime.Now.Year - _BirthDate.Year);
-            }
-        }
-        public Cat(DateTime birthdate, string name = "not defiend", string color = "nothing") : base(name)
+        public Cat(DateTime birthdate, string name = "not defiend", string color = "nothing") : base(name, birthdate)
         {
             Color = color;
-            _BirthDate = birthdate;
         }
         public override string ToString()
         {
