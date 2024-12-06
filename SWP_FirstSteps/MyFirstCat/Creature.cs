@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MyFirstCat
+﻿namespace MyFirstCat
 {
     internal class Creature
     {
@@ -23,7 +21,7 @@ namespace MyFirstCat
                 return (DateTime.Now.Year - _BirthDate.Year);
             }
         }
-        public Creature( string name, string color, DateTime birthdate)
+        public Creature(string name, string color, DateTime birthdate)
         {
             Name = name;
             _Color = color;
