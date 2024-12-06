@@ -23,8 +23,8 @@ namespace MyFirstCat
             Console.WriteLine("\nThe Shelter in Dornbirn contains:");
             foreach (var animal in Animals)
             {
-                //Console.WriteLine($"A {animal.Color} cat that is {animal.Age} years old and is called {animal.Name}");
                 Console.WriteLine(animal.ToString());
+                animal.Speak();
             }
         }
     }
