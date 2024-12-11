@@ -1,11 +1,11 @@
 ﻿namespace MyFirstCat
 {
-    class Cat : Animal
+    internal class Dog : Animal
     {
-        public Cat(DateTime birthdate, string name = "not defiend", string color = "nothing", string animalType = "Cat", int legs = 4) : base(name, color, birthdate, animalType, legs) { }
+        public Dog(DateTime birthdate, string name = "not defiend", string color = "nothing", string animalType = "Dog", int legs = 4) : base(name, color, birthdate, animalType, legs) { }
         public override void Speak()
         {
-            Console.WriteLine($"{Name}: *miau*");
+            Console.WriteLine($"{Name}: *woof*");
         }
         public override string ToString()
         {
