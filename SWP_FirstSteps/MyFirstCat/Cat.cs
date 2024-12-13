@@ -1,6 +1,6 @@
 ﻿namespace MyFirstCat
 {
-    class Cat : Animal
+    public class Cat : Animal
     {
         public Cat(DateTime birthdate, string name = "not defiend", string color = "nothing", string animalType = "Cat", int legs = 4) : base(name, color, birthdate, animalType, legs) { }
         public override void Speak()

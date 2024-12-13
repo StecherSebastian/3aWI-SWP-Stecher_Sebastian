@@ -1,6 +1,6 @@
 ﻿namespace MyFirstCat
 {
-    internal class Creature
+    public class Creature
     {
         public string Name { get; set; }
         private DateTime _BirthDate;
