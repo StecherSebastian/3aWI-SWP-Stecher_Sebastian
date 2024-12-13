@@ -1,6 +1,6 @@
 ﻿namespace MyFirstCat
 {
-    class Animal : Creature
+    public class Animal : Creature
     {
         private int _Legs;
         public int Legs { get { return _Legs; } }

@@ -1,6 +1,6 @@
 ﻿namespace MyFirstCat
 {
-    class AnimalShelter
+    public class AnimalShelter
     {
         private List<Animal> _Animals;
         public List<Animal> Animals
@@ -15,6 +15,10 @@
         public AnimalShelter()
         {
             Animals = new List<Animal>();
+        }
+        public void AddAnimal(Animal a) 
+        { 
+            Animals.Add(a);
         }
         public void printAnimalShelter()
         {

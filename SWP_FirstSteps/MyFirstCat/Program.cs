@@ -20,7 +20,7 @@ while (!String.Equals(userInputString, "Exit", StringComparison.CurrentCultureIg
             Console.Write("\nWhat is the name of the cat?\n*:");
             userInputString = Console.ReadLine();
             myCat.Name = userInputString;
-            shelterDornbirn.Animals.Add(myCat);
+            shelterDornbirn.AddAnimal(myCat);
             break;
         case "2":
             Console.Write("\nWhen was the dog born? (YYYY/MM/DD)\n*:");
@@ -32,7 +32,7 @@ while (!String.Equals(userInputString, "Exit", StringComparison.CurrentCultureIg
             Console.Write("\nWhat is the name of the dog?\n*:");
             userInputString = Console.ReadLine();
             myDog.Name = userInputString;
-            shelterDornbirn.Animals.Add(myDog);
+            shelterDornbirn.AddAnimal(myDog);
             break;
         case "3":
             shelterDornbirn.printAnimalShelter();
