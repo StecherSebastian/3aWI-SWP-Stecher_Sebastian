@@ -12,7 +12,7 @@ while (!String.Equals(userInputString, "Exit", StringComparison.CurrentCultureIg
     {
         case "1":
             Console.Write("\nWhen was the cat born? (YYYY/MM/DD)\n*:");
-            GetDate();
+            userInputDate = GetDate();
             Cat myCat = new Cat(userInputDate);
             Console.Write("\nWhich color has the cat?\n*:");
             userInputString = Console.ReadLine();
@@ -24,7 +24,7 @@ while (!String.Equals(userInputString, "Exit", StringComparison.CurrentCultureIg
             break;
         case "2":
             Console.Write("\nWhen was the dog born? (YYYY/MM/DD)\n*:");
-            GetDate();
+            userInputDate = GetDate();
             Dog myDog = new Dog(userInputDate);
             Console.Write("\nWhich color has the dog?\n*:");
             userInputString = Console.ReadLine();
@@ -42,11 +42,11 @@ while (!String.Equals(userInputString, "Exit", StringComparison.CurrentCultureIg
 DateTime GetDate()
 {
     string input = Console.ReadLine();
-    DateTime date = new DateTime(0001, 01, 01);
+    DateTime date;
     while (!DateTime.TryParse(input, out date))
     {
-        Console.Write("\n### Invalid Date: Please Try Again ###\n*:");
         input = Console.ReadLine();
+        Console.Write("\n### Invalid Date: Please Try Again ###\n*:");
     }
     return date;
 }
