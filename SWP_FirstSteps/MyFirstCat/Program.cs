@@ -45,8 +45,8 @@ DateTime GetDate()
     DateTime date;
     while (!DateTime.TryParse(input, out date))
     {
-        input = Console.ReadLine();
         Console.Write("\n### Invalid Date: Please Try Again ###\n*:");
+        input = Console.ReadLine();
     }
     return date;
 }
