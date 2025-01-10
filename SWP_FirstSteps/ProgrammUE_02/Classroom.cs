@@ -7,6 +7,7 @@
         private int _Seats;
         public int Seats { get { return _Seats; } }
         private bool _Cynap;
+        public bool Cynap { get { return _Cynap; } }
         public Classroom(int size, int seats, bool cynap) : base(size)
         {
             _Seats = size;
