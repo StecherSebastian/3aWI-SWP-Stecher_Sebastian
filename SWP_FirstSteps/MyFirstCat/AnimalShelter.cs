@@ -23,6 +23,7 @@
         public void printAnimalShelter()
         {
             Console.WriteLine($"There are {NumberOfAnimals} Animals in the Animal Shelter of which are {NumberOfCats} Cats and {NumberOfDogs} Dogs");
+            Console.WriteLine($"Their average age is {AverageAgeOfAnimals}");
             Console.WriteLine("\nThe Shelter in Dornbirn contains:");
             foreach (var animal in Animals)
             {
@@ -38,6 +39,11 @@
         public int NumberOfDogs
         {
             get { return _Animals.Where(a => a.GetType() == typeof(Dog)).Count(); }
+        }
+
+        public double AverageAgeOfAnimals
+        {
+            get { return _Animals.Average(a => a.Age); }
         }
     }
 }
