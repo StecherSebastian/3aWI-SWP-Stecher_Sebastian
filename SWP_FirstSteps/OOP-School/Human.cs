@@ -3,7 +3,7 @@
     public class Human
     {
         public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string SecondName { get; set; }
         private DateTime _Birthdate;
         public int Age { get { return DateTime.Now.Year - _Birthdate.Year; } }
         private string _Gender;
@@ -11,7 +11,7 @@
         public Human(DateTime birtdate, string lastName, string gender, string firstName = "") 
         {
             _Birthdate = birtdate;
-            LastName = lastName;
+            SecondName = lastName;
             _Gender = gender;
         }
     }
