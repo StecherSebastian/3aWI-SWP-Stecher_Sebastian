@@ -17,9 +17,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyFirstCat", "MyFirstCat\My
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FirstUnitTest", "FirstUnitTest\FirstUnitTest.csproj", "{439DD3FE-8D3E-4E88-BB2B-82F6C0FFFA59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP-School", "OOP-School\OOP-School.csproj", "{CBC7856D-F65F-470E-939C-F7B93E411B05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP-School", "OOP-School\OOP-School.csproj", "{CBC7856D-F65F-470E-939C-F7B93E411B05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP-School_Tests", "OOP-School_Tests\OOP-School_Tests.csproj", "{1AA0B947-9A8A-469C-A654-04106B28AA51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP-School_Tests", "OOP-School_Tests\OOP-School_Tests.csproj", "{1AA0B947-9A8A-469C-A654-04106B28AA51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgrammUE_02", "ProgrammUE_02\ProgrammUE_02.csproj", "{A2CAB64F-ECE3-4591-A634-D9C177002744}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PUE_02_Tests", "PUE_02_Tests\PUE_02_Tests.csproj", "{9466E79E-23A9-40EF-A273-8069C1F38EDB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +67,14 @@ Global
 		{1AA0B947-9A8A-469C-A654-04106B28AA51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AA0B947-9A8A-469C-A654-04106B28AA51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AA0B947-9A8A-469C-A654-04106B28AA51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2CAB64F-ECE3-4591-A634-D9C177002744}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2CAB64F-ECE3-4591-A634-D9C177002744}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2CAB64F-ECE3-4591-A634-D9C177002744}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2CAB64F-ECE3-4591-A634-D9C177002744}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9466E79E-23A9-40EF-A273-8069C1F38EDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9466E79E-23A9-40EF-A273-8069C1F38EDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9466E79E-23A9-40EF-A273-8069C1F38EDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9466E79E-23A9-40EF-A273-8069C1F38EDB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
